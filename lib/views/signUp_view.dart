@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/views/home_view.dart';
 import 'package:ecommerce_app/widgets/custom_button.dart';
 import 'package:ecommerce_app/widgets/custom_footer_line.dart';
 import 'package:ecommerce_app/widgets/custom_text_field.dart';
@@ -40,7 +41,12 @@ class SignUpView extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                const CustomButton(text: 'Regestier'),
+                CustomButton(
+                  text: 'Regestier',
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, HomeView.id);
+                  },
+                ),
                 const SizedBox(
                   height: 30,
                 ),

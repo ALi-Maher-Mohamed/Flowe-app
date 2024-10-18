@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/views/home_view.dart';
 import 'package:ecommerce_app/views/login_view.dart';
 import 'package:ecommerce_app/views/signUp_view.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,9 @@ class FlowerApp extends StatelessWidget {
       routes: {
         SignUpView.id: (context) => const SignUpView(),
         LoginView.id: (context) => const LoginView(),
+        HomeView.id: (context) => const HomeView(),
       },
-      // debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner: false,
       home: const SafeArea(
           child: Scaffold(
         body: LoginView(),

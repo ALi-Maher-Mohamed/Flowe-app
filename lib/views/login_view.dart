@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/views/home_view.dart';
 import 'package:ecommerce_app/views/signUp_view.dart';
 import 'package:ecommerce_app/widgets/custom_button.dart';
 import 'package:ecommerce_app/widgets/custom_footer_line.dart';
@@ -35,13 +36,18 @@ class LoginView extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                const CustomButton(text: 'Log in'),
+                CustomButton(
+                  text: 'Log in',
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, HomeView.id);
+                  },
+                ),
                 const SizedBox(
                   height: 30,
                 ),
                 CustomFooterLine(
                     onPressed: () {
-                      Navigator.pushNamed(context, SignUpView.id);
+                      Navigator.pushReplacementNamed(context, SignUpView.id);
                     },
                     text: "Don't have an account",
                     textButton: 'Register !')
